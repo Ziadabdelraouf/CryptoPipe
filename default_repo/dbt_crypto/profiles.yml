@@ -1,0 +1,12 @@
+dbt_crypto:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: cryptopipe-project
+      dataset: cryptopipe_raw_data
+      threads: 1
+      keyfile: /home/src/creds.json
+      timeout_seconds: 300
+      location: US

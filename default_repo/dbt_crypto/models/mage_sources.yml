@@ -1,0 +1,14 @@
+sources:
+- description: Dataframes Mage upstream blocks
+  loader: mage
+  name: mage_dbt_crypto
+  schema: cryptopipe_raw_data
+  tables:
+  - description: Dataframe for block `export_to_bigquery` of the `cryptopipe_pipeline`
+      mage pipeline.
+    identifier: mage_cryptopipe_pipeline_export_to_bigquery
+    meta:
+      block_uuid: export_to_bigquery
+      pipeline_uuid: cryptopipe_pipeline
+    name: cryptopipe_pipeline_export_to_bigquery
+version: 2

@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  mage:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "6789:6789"
+    env_file:
+      - .env
+    volumes:
+      - .:/home/src
+    environment:
+      - REQUIRE_USER_AUTHENTICATION=0
+    restart: on-failure
